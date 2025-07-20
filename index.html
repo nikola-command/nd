@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Никола Димитров - Портфолио</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
+            padding: 0 30px;
+        }
+        header h1 {
+            font-size: 4.5em;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+        }
+        header p {
+            font-size: 1.6em;
+            font-weight: 300;
+            max-width: 600px;
+        }
+        nav {
+            background-color: rgba(30, 30, 30, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 1.1em;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #00aaff;
+        }
+        section {
+            padding: 100px 30px;
+            max-width: 1400px;
+            margin: auto;
+        }
+        h2 {
+            font-size: 3em;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .about, .contact {
+            text-align: center;
+        }
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 1.3em;
+            font-weight: 300;
+        }
+        .contact form {
+            max-width: 600px;
+            margin: auto;
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            background: #1e1e1e;
+            border: none;
+            color: #ffffff;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 300;
+            transition: background 0.3s;
+        }
+        .contact input:focus, .contact textarea:focus {
+            background: #2a2a2a;
+            outline: none;
+        }
+        .contact textarea {
+            resize: vertical;
+            min-height: 160px;
+        }
+        .contact button {
+            background: #00aaff;
+            border: none;
+            padding: 15px 40px;
+            color: #ffffff;
+            font-size: 1.2em;
+            font-weight: 400;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        .contact button:hover {
+            background: #0088cc;
+        }
+        footer {
+            background: #1e1e1e;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.95em;
+            font-weight: 300;
+        }
+        .social-links a {
+            color: #00aaff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1em;
+        }
+        .social-links a:hover {
+            color: #0088cc;
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 3em; }
+            header p { font-size: 1.3em; }
+            nav a { margin: 0 15px; font-size: 1em; }
+            h2 { font-size: 2.2em; }
+            section { padding: 60px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header id="home">
+        <h1>Никола Димитров</h1>
+        <p>Уеб разработчик и дизайнер с фокус върху елегантни и функционални решения</p>
+    </header>
+    <nav>
+        <a href="#home">Начало</a>
+        <a href="#about">За мен</a>
+        <a href="#contact">Контакти</a>
+    </nav>
+    <section id="about">
+        <h2>За мен</h2>
+        <p>Здравейте, аз съм Никола Димитров, страстен уеб разработчик и дизайнер. Специализирам се в създаването на модерни и интуитивни уеб сайтове, които комбинират естетика и функционалност.</p>
+    </section>
+    <section id="contact">
+        <h2>Контакти</h2>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Име" required>
+            <input type="email" name="email" placeholder="Имейл" required>
+            <textarea name="message" placeholder="Съобщение" required></textarea>
+            <button type="submit">Изпрати</button>
+        </form>
+    </section>
+    <footer>
+        <p>© 2025 Никола Димитров. Всички права запазени.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/nikola_dimi3r0v847/" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=100091158530630" target="_blank">Facebook</a>
+            <a href="https://www.tiktok.com/@nikola.gamers?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a>
+            <a href="https://www.youtube.com/@nikoladimitrov3610" target="_blank">YouTube</a>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.querySelector('input[name="name"]').value;
+            const email = document.querySelector('input[name="email"]').value;
+            const message = document.querySelector('textarea[name="message"]').value;
+            const subject = encodeURIComponent(`Съобщение от ${name}`);
+            const body = encodeURIComponent(`Име: ${name}\nИмейл: ${email}\nСъобщение: ${message}`);
+            window.location.href = `mailto:nikola@nedkoidmitrov.com?subject=${subject}&body=${body}`;
+        });
+    </script>
+</body>
+</html>
